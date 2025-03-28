@@ -1,0 +1,188 @@
+/* ----------------------------------------------------
+   GLOBAL STYLES
+---------------------------------------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f2f5; /* Light gray background often seen in social UIs */
+    color: #555; /* Slightly dark text for readability */
+  }
+  
+  /* Remove default link underlines and set a base link color */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  /* ----------------------------------------------------
+     NAVBAR
+  ---------------------------------------------------- */
+  .navbar {
+    background-color: #fff; /* White background */
+    border-bottom: 1px solid #e6e6e6; /* Subtle bottom border */
+  }
+  .navbar-brand {
+    font-weight: bold;
+    color: #333;
+  }
+  .navbar-nav .nav-link {
+    color: #333;
+    margin-left: 1rem;
+  }
+  .navbar-nav .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* ----------------------------------------------------
+     SIDEBARS
+  ---------------------------------------------------- */
+  aside {
+    /* The white background and a subtle border or shadow */
+    background-color: transparent; /* We'll rely on card/list-group for styling */
+  }
+  
+  /* LEFT SIDEBAR LIST GROUP */
+  .list-group-item {
+    border: none; 
+    border-bottom: 1px solid #eee; 
+    border-radius: 0;
+    color: #555;
+    background-color: #fff;
+  }
+  .list-group-item:hover {
+    background-color: #f7f7f7;
+  }
+  .list-group-item.active {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Recent Activity Heading */
+  aside h6 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Small bullet list for recent activity */
+  aside ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  aside ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ----------------------------------------------------
+     CENTER FEED
+  ---------------------------------------------------- */
+  main {
+    /* The feed area will typically be white cards against the gray background */
+  }
+  
+  /* Post Box */
+  .card .card-body textarea {
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .card .card-body button {
+    margin-top: 0.5rem;
+  }
+  
+  /* Single Post Card */
+  .card {
+    border: none; /* Remove default card border */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Light shadow for depth */
+    background-color: #fff;
+  }
+  .card-footer {
+    background-color: #fff;
+    border-top: none;
+  }
+  
+  /* Post Header (User + Date) */
+  .card-body .d-flex img {
+    border-radius: 50%; /* Round profile image */
+  }
+  .card-body strong {
+    color: #333;
+  }
+  .card-body .text-muted {
+    font-size: 0.85rem;
+  }
+  
+  /* Post Text */
+  .card-body p {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  /* Post Image */
+  .card-body img.img-fluid {
+    border-radius: 5px;
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  /* Post Footer (Like, Comment, Share) */
+  .card-footer a {
+    color: #999;
+    margin-right: 1rem;
+  }
+  .card-footer a:hover {
+    color: #666;
+  }
+  
+  /* ----------------------------------------------------
+     RIGHT SIDEBAR
+  ---------------------------------------------------- */
+  .profile-card img {
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+  .profile-card h5 {
+    font-weight: 600;
+    color: #333;
+  }
+  .profile-card p {
+    color: #777;
+    margin: 0.25rem 0;
+  }
+  
+  /* Ad/Promo Card */
+  .ad-card h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  .ad-card p {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  .ad-card .btn {
+    margin-top: 0.5rem;
+  }
+  
+  /* ----------------------------------------------------
+     UTILITY CLASSES (Optional)
+  ---------------------------------------------------- */
+  .border-bottom {
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .text-small {
+    font-size: 0.85rem;
+  }
+  .rounded-circle {
+    border-radius: 50%;
+  }
+  

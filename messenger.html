@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <title>Messenger</title>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    >
+    <!-- Custom CSS (Optional) -->
+    <link rel="stylesheet" href="css/messenger.css">
+  </head>
+  <body>
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-light bg-light border-bottom">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Left: Brand -->
+        <a class="navbar-brand font-weight-bold" href="#">A</a>
+        <!-- Right: Home & Log Out -->
+        <div>
+          <a href="newsFeed.html" class="mr-3 text-dark">Home</a>
+          <a href="#" class="text-dark" onclick="logoutPrompt()">Log Out</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container-fluid" style="height: 92vh;">
+      <div class="row h-100">
+        <!-- LEFT SIDEBAR: CONTACTS -->
+        <aside class="col-md-3 border-right d-flex flex-column p-0">
+          <!-- Header / Logged In User (Optional) -->
+          <div class="p-3 border-bottom">
+            <strong>name1</strong>
+          </div>
+          <!-- Contacts List -->
+          <div class="flex-grow-1 overflow-auto">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name2">
+                <span>name2</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name3">
+                <span>name3</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name4">
+                <span>name4</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name5">
+                <span>name5</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name6">
+                <span>name6</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name7">
+                <span>name7</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- MAIN CHAT AREA -->
+        <section class="col-md-9 d-flex flex-column p-0">
+          <!-- Chat Header -->
+          <div class="border-bottom p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name2">
+              <strong>name2</strong>
+            </div>
+            <div>
+              <button class="btn btn-outline-secondary btn-sm">Call</button>
+              <button class="btn btn-outline-secondary btn-sm">Video</button>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div class="flex-grow-1 p-3 overflow-auto" id="chatArea">
+            <!-- Example: Message from name2 -->
+            <div class="d-flex mb-3">
+              <div>
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name2">
+              </div>
+              <div class="bg-light p-2 rounded">
+                <p class="mb-1"><strong>name2</strong></p>
+                <p class="mb-1">This is a sample message from name2.</p>
+                <small class="text-muted">12:01 PM</small>
+              </div>
+            </div>
+
+            <!-- Example: Message from logged-in user (name1) -->
+            <div class="d-flex mb-3 justify-content-end">
+              <div class="bg-primary text-white p-2 rounded" style="max-width: 60%;">
+                <p class="mb-1">This is a sample message from name1.</p>
+                <small class="text-white-50">12:02 PM</small>
+              </div>
+            </div>
+
+            <!-- Another sample message from name2 -->
+            <div class="d-flex mb-3">
+              <div>
+                <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" alt="name2">
+              </div>
+              <div class="bg-light p-2 rounded">
+                <p class="mb-1"><strong>name2</strong></p>
+                <p class="mb-1">Another sample message to show conversation.</p>
+                <small class="text-muted">12:03 PM</small>
+              </div>
+            </div>
+
+            <!-- Another sample message from name1 -->
+            <div class="d-flex mb-3 justify-content-end">
+              <div class="bg-primary text-white p-2 rounded" style="max-width: 60%;">
+                <p class="mb-1">And a follow-up sample message from name1.</p>
+                <small class="text-white-50">12:04 PM</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="border-top p-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Type a message...">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Send</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+      function logoutPrompt() {
+        const confirmed = confirm("Do you want to log out?");
+        if (confirmed) {
+          window.location.href = "login.html";
+        }
+      }
+    </script>
+  </body>
+</html>

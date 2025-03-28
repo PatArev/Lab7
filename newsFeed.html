@@ -1,0 +1,184 @@
+<html>
+  <head>
+    <title>News Feed</title>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    >
+    <!-- Custom CSS (Optional) -->
+    <link rel="stylesheet" href="css/newsFeed.css">
+  </head>
+  <body>
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand font-weight-bold" href="newsFeed.html">Sample Title</a>
+
+        <!-- Toggler (for small screens) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <!-- "Home" -> Points to the News Feed -->
+            <li class="nav-item active">
+              <a class="nav-link" href="newsFeed.html">
+                Home <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <!-- "Timeline" -> Links to Profile -->
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Timeline</a>
+            </li>
+            <!-- Account Settings (Placeholder) -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Account Settings</a>
+            </li>
+            <!-- Removed "More Pages" from the navbar -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <!-- LEFT SIDEBAR -->
+        <aside class="col-md-3 mb-4">
+          <div class="list-group">
+            <a href="newsFeed.html" class="list-group-item list-group-item-action active">
+              News Feed
+            </a>
+            <!-- Inbox -> Links to Messenger -->
+            <a href="messenger.html" class="list-group-item list-group-item-action">
+              Inbox
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              Photos
+            </a>
+            <!-- Removed My Pages, Videos, Friends -->
+          </div>
+
+          <!-- Recent Activity Example -->
+          <div class="mt-4">
+            <h6 class="font-weight-bold">Recent Activity</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2">name2 commented on a post</li>
+              <li class="mb-2">name3 posted a status update</li>
+              <li class="mb-2">name4 liked a post</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CENTER FEED -->
+        <main class="col-md-6 mb-4">
+          <!-- Post Box -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <textarea
+                class="form-control mb-2"
+                rows="2"
+                placeholder="Write something..."
+              ></textarea>
+              <button class="btn btn-primary float-right">Post</button>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+
+          <!-- Example Post 1 -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  src="https://via.placeholder.com/40"
+                  class="rounded-circle mr-2"
+                  alt="name2"
+                >
+                <div>
+                  <strong>name2</strong>
+                  <small class="text-muted d-block">Published 1 hr ago</small>
+                </div>
+              </div>
+              <p>This is a sample post text. It shows some placeholder content for a post.</p>
+              <img
+                src="https://via.placeholder.com/600x300"
+                class="img-fluid rounded"
+                alt="Sample Post Image"
+              >
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="#" class="text-muted">Like</a>
+              <a href="#" class="text-muted">Comment</a>
+              <a href="#" class="text-muted">Share</a>
+            </div>
+          </div>
+
+          <!-- Example Post 2 -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  src="https://via.placeholder.com/40"
+                  class="rounded-circle mr-2"
+                  alt="name3"
+                >
+                <div>
+                  <strong>name3</strong>
+                  <small class="text-muted d-block">Published 2 hrs ago</small>
+                </div>
+              </div>
+              <p>This is another sample post. It can contain text, images, or other content.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="#" class="text-muted">Like</a>
+              <a href="#" class="text-muted">Comment</a>
+              <a href="#" class="text-muted">Share</a>
+            </div>
+          </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="col-md-3 mb-4">
+          <!-- User Profile Card -->
+          <div class="card mb-3">
+            <div class="card-body text-center">
+              <img
+                src="https://via.placeholder.com/80"
+                class="rounded-circle mb-2"
+                alt="name1"
+              >
+              <h5 class="mb-0">name1</h5>
+              <p class="text-muted mb-0">No Notifications</p>
+              <p class="text-muted mb-0">2 Messages</p>
+            </div>
+          </div>
+
+          <!-- Ad / Promo Box -->
+          <div class="card">
+            <div class="card-body">
+              <h6 class="font-weight-bold">Create Your Own Favourite Page</h6>
+              <p class="small text-muted">Like the one you see here. It’s easy!</p>
+              <button class="btn btn-outline-primary btn-block">Learn More</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

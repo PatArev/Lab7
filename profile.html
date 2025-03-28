@@ -1,0 +1,263 @@
+<html>
+  <head>
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    >
+    <!-- Custom CSS (Optional) -->
+    <link rel="stylesheet" href="css/profile.css">
+  </head>
+  <body>
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <!-- Brand or Site Name -->
+        <a class="navbar-brand font-weight-bold" href="newsFeed.html">A</a>
+
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarProfile"
+          aria-controls="navbarProfile"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarProfile">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="newsFeed.html">News Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="messenger.html">Messenger</a>
+            </li>
+            <!-- Log Out Link -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                onclick="logoutPrompt()"
+              >
+                Log Out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- COVER PHOTO SECTION -->
+    <div class="position-relative">
+      <!-- Replace with your own cover image -->
+      <img
+        src="https://via.placeholder.com/1200x300"
+        class="img-fluid w-100"
+        alt="Cover Photo"
+      >
+      <!-- USER AVATAR & INFO (Positioned Absolute) -->
+      <div
+        class="position-absolute d-flex align-items-center"
+        style="bottom: -60px; left: 30px;"
+      >
+        <img
+          src="https://via.placeholder.com/120"
+          class="rounded-circle border border-white"
+          style="width:120px; height:120px; object-fit:cover;"
+          alt="User Avatar"
+        >
+        <div class="ml-3">
+          <h2 class="font-weight-bold mb-0">Sample Text</h2>
+          <p class="text-muted mb-1">@sample_text</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE NAV & ACTIONS -->
+    <div class="container mt-5">
+      <!-- Follow & Message Buttons -->
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-outline-primary mr-2">Follow</button>
+        <button class="btn btn-primary">Message</button>
+      </div>
+      
+      <!-- Navigation Tabs -->
+      <ul class="nav nav-tabs mt-3" id="profileTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="timeline-tab" data-toggle="tab" href="#timeline" role="tab">
+            Timeline
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab">
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends" role="tab">
+            Friends
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="photos-tab" data-toggle="tab" href="#photos" role="tab">
+            Photos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab">
+            Recent Media
+          </a>
+        </li>
+      </ul>
+
+      <!-- TAB CONTENT -->
+      <div class="tab-content" id="profileTabContent">
+        <!-- TIMELINE TAB -->
+        <div
+          class="tab-pane fade show active pt-3"
+          id="timeline"
+          role="tabpanel"
+          aria-labelledby="timeline-tab"
+        >
+          <!-- Post Composer -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <textarea
+                class="form-control mb-2"
+                rows="2"
+                placeholder="What's on your mind?"
+              ></textarea>
+              <div>
+                <button class="btn btn-secondary btn-sm mr-2">Photo/Video</button>
+                <button class="btn btn-secondary btn-sm mr-2">Tag Friends</button>
+                <button class="btn btn-secondary btn-sm mr-2">Check In</button>
+                <button class="btn btn-primary float-right">Publish</button>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example Post -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  src="https://via.placeholder.com/40"
+                  class="rounded-circle mr-2"
+                  alt="User"
+                >
+                <div>
+                  <strong>Sample Text</strong>
+                  <small class="text-muted d-block">Cover Update</small>
+                </div>
+              </div>
+              <p>Check out my new cover photo!</p>
+              <img
+                src="https://via.placeholder.com/600x300"
+                class="img-fluid rounded"
+                alt="Cover Update"
+              >
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="#" class="text-muted">Like</a>
+              <a href="#" class="text-muted">Comment</a>
+              <a href="#" class="text-muted">Share</a>
+            </div>
+          </div>
+
+          <!-- Another Post Example -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  src="https://via.placeholder.com/40"
+                  class="rounded-circle mr-2"
+                  alt="User"
+                >
+                <div>
+                  <strong>Sample Text</strong>
+                  <small class="text-muted d-block">2 hrs ago</small>
+                </div>
+              </div>
+              <p>Loving the new robotic design concept I'm working on!</p>
+              <img
+                src="https://via.placeholder.com/600x300"
+                class="img-fluid rounded"
+                alt="Post Image"
+              >
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="#" class="text-muted">Like</a>
+              <a href="#" class="text-muted">Comment</a>
+              <a href="#" class="text-muted">Share</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT TAB -->
+        <div class="tab-pane fade pt-3" id="about" role="tabpanel" aria-labelledby="about-tab">
+          <h5>About Sample</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum...</p>
+          <!-- Add more about info here -->
+        </div>
+
+        <!-- FRIENDS TAB -->
+        <div class="tab-pane fade pt-3" id="friends" role="tabpanel" aria-labelledby="friends-tab">
+          <h5>Friends</h5>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <img
+                src="https://via.placeholder.com/150"
+                class="img-fluid rounded"
+                alt="Friend"
+              >
+              <p class="mt-2 mb-0"><strong>Friend Name</strong></p>
+            </div>
+            <!-- Repeat for other friends -->
+          </div>
+        </div>
+
+        <!-- PHOTOS TAB -->
+        <div class="tab-pane fade pt-3" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+          <h5>Photos</h5>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <img
+                src="https://via.placeholder.com/300"
+                class="img-fluid rounded"
+                alt="Photo"
+              >
+            </div>
+            <!-- Repeat for other photos -->
+          </div>
+        </div>
+
+        <!-- RECENT MEDIA TAB -->
+        <div class="tab-pane fade pt-3" id="media" role="tabpanel" aria-labelledby="media-tab">
+          <h5>Recent Media</h5>
+          <!-- Add your recent media content here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Simple Log Out Prompt
+      function logoutPrompt() {
+        const confirmed = confirm("Do you want to log out?");
+        if (confirmed) {
+          window.location.href = "login.html";
+        }
+      }
+    </script>
+  </body>
+</html>
