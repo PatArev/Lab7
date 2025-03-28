@@ -2,20 +2,27 @@
 
 /* Global Resets & Body */
 html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-  }
+  margin: 0;
+  padding: 0;
+  /*background-color: rgb(234, 234, 234);*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+
+  background-image: url('cat_bg.jpg'); /* or whatever your image path is */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Optional: makes it scroll nicely */
+}
+
   
   /* Remove link underlines, use a default color. */
   a {
     text-decoration: none;
-    color: #007bff;
+    color: #eec375;
   }
   a:hover {
-    color: #0056b3;
+    color: #eec375;
   }
   
   /* ------------------------------
@@ -27,16 +34,16 @@ html, body {
   }
   .navbar-brand {
     font-weight: bold;
-    color: #007bff; 
+    color: #eec375; 
   }
   .navbar-brand:hover {
-    color: #0056b3;
+    color: #eec375;
   }
   .navbar-nav .nav-link {
     color: #555;
   }
   .navbar-nav .nav-link:hover {
-    color: #007bff;
+    color: #eec375;
   }
   
   /* ------------------------------
@@ -47,7 +54,14 @@ html, body {
   .position-relative img.img-fluid.w-100 {
     max-height: 300px; /* approximate height of the cover photo */
     object-fit: cover; /* crop/cover the image area */
+    background-color:#e2e2e2;
   }
+  .container.mt-5 {
+    background-color: #f5f5f5; /* light gray */
+    padding: 2rem;
+    border-radius: 10px; /* optional, just to soften the corners */
+  }
+  
   
   /* The avatar is placed at bottom-left of the cover */
   .position-absolute {
@@ -89,12 +103,23 @@ html, body {
   }
   .container.mt-5 .btn-primary {
     border-radius: 20px;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #eec375;
+    border-color: #eec375;
   }
   .container.mt-5 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #00408f;
+    background-color: #eec375;
+    border-color: #eec375;
+  }
+  .btn-outline-primary {
+    color: #eec375;
+    border-color: #eec375;
+    background-color: transparent;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #eec375;
+    color: white;
+    border-color: #eec375;
   }
   
   /* Nav Tabs */
@@ -103,7 +128,7 @@ html, body {
   }
   .nav-tabs .nav-item.show .nav-link, 
   .nav-tabs .nav-link.active {
-    color: #007bff;
+    color: #eec375;
     background-color: #fff;
     border-color: #ddd #ddd #fff;
     font-weight: 500;
@@ -114,7 +139,7 @@ html, body {
     padding: 0.75rem 1rem;
   }
   .nav-tabs .nav-link:hover {
-    color: #007bff;
+    color: #eec375;
   }
   
   /* Tab Content Area */
@@ -149,6 +174,7 @@ html, body {
   }
   .card.mb-3 .card-body .btn.btn-secondary.btn-sm:hover {
     background-color: #e2e2e2;
+    
   }
   .card.mb-3 .card-body .btn.btn-primary.float-right {
     border-radius: 20px;
@@ -198,7 +224,7 @@ html, body {
     margin-right: 1.5rem;
   }
   .card.mb-3 .card-footer a:hover {
-    color: #007bff;
+    color: #eec375;
   }
   
   /* ------------------------------
@@ -249,4 +275,6 @@ html, body {
       margin-top: 2rem !important;
     }
   }
+
+  
   
