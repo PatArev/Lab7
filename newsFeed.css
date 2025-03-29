@@ -11,11 +11,11 @@ html, body {
   
 
   a {
-    color: #059663;
+    color: #eec375;
     text-decoration: none;
   }
   a:hover {
-    color: #00a362;
+    color: #eec375;
     text-decoration: none;
   }
   
@@ -35,7 +35,7 @@ html, body {
     margin-left: 1rem;
   }
   .navbar-nav .nav-link:hover {
-    color: #00ff7b;
+    color: #eec375;
   }
   
   /* ----------------------------------------------------
@@ -58,8 +58,8 @@ html, body {
     background-color: #f7f7f7;
   }
   .list-group-item.active {
-    background-color: #00ff2a;
-    border-color: #00ff37;
+    background-color: #eec375;
+    border-color: #eec375;
     color: #fff;
   }
   
